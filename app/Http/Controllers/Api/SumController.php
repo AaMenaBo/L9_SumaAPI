@@ -11,9 +11,9 @@ class SumController extends Controller
     {
         switch ($mode) {
             case 'sum':
-                return $this->sum($params);
+                return ['return' => $this->sum($params)];
             case 'mul':
-                return $this->mul($params);
+                return ['return' => $this->mul($params)];
             default:
                 return response()->json(['error' => 'Operación no válida'], 400);
         }
